@@ -1,4 +1,5 @@
 import { GraduationCap, Calendar, MapPin } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Education = () => {
   return (
@@ -6,19 +7,31 @@ const Education = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="text-center mb-16"
+          >
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
               Education
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
-          </div>
+          </motion.div>
 
           {/* Education Card */}
           <div className="relative">
             {/* Timeline line */}
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-border hidden md:block" />
 
-            <div className="relative pl-0 md:pl-20">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true, margin: "-100px" }}
+              className="relative pl-0 md:pl-20"
+            >
               {/* Timeline dot */}
               <div className="absolute left-6 top-8 w-5 h-5 rounded-full bg-primary border-4 border-background shadow-soft hidden md:block" />
 
@@ -64,7 +77,7 @@ const Education = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

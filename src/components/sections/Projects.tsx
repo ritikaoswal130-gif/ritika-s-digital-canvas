@@ -1,5 +1,6 @@
-import { ExternalLink, Github, Sparkles } from "lucide-react";
+import { Github, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -18,19 +19,29 @@ const Projects = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="text-center mb-16"
+          >
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
               Projects
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
-          </div>
+          </motion.div>
 
           {/* Projects Grid */}
           <div className="grid md:grid-cols-2 gap-8">
             {/* Featured Project */}
-            {projects.map((project) => (
-              <div
+            {projects.map((project, index) => (
+              <motion.div
                 key={project.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true, margin: "-50px" }}
                 className="group p-8 rounded-2xl gradient-card shadow-soft hover:shadow-hover transition-all duration-300 hover:-translate-y-1 border border-border/50"
               >
                 {project.featured && (
@@ -73,11 +84,17 @@ const Projects = () => {
                     </a>
                   </Button>
                 </div>
-              </div>
+              </motion.div>
             ))}
 
             {/* Coming Soon Card */}
-            <div className="group p-8 rounded-2xl border-2 border-dashed border-border hover:border-primary/50 transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[300px]">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true, margin: "-50px" }}
+              className="group p-8 rounded-2xl border-2 border-dashed border-border hover:border-primary/50 transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[300px]"
+            >
               <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mb-4 group-hover:bg-accent transition-colors duration-300">
                 <Sparkles className="w-8 h-8 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
               </div>
@@ -87,7 +104,7 @@ const Projects = () => {
               <p className="text-muted-foreground">
                 Exciting projects in the works. Stay tuned!
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

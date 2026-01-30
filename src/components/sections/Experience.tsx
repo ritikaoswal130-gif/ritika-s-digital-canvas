@@ -1,4 +1,5 @@
 import { Briefcase, Users, BookOpen, Award, Star } from "lucide-react";
+import { motion } from "framer-motion";
 
 const experiences = [
   {
@@ -39,12 +40,18 @@ const Experience = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="text-center mb-16"
+          >
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
               Experience & Leadership
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
-          </div>
+          </motion.div>
 
           {/* Timeline */}
           <div className="relative">
@@ -53,10 +60,13 @@ const Experience = () => {
 
             <div className="space-y-8">
               {experiences.map((exp, index) => (
-                <div
+                <motion.div
                   key={exp.role}
-                  className="relative pl-0 md:pl-20 animate-fade-up"
-                  style={{ animationDelay: `${index * 0.1}s`, opacity: 0 }}
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  className="relative pl-0 md:pl-20"
                 >
                   {/* Timeline dot */}
                   <div className="absolute left-5 top-8 w-7 h-7 rounded-full bg-accent border-4 border-background shadow-soft hidden md:flex items-center justify-center">
@@ -83,7 +93,7 @@ const Experience = () => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

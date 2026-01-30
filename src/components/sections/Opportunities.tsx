@@ -1,4 +1,5 @@
 import { Rocket, Briefcase, Users, TrendingUp } from "lucide-react";
+import { motion } from "framer-motion";
 
 const opportunities = [
   {
@@ -29,7 +30,13 @@ const Opportunities = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="text-center mb-16"
+          >
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
               Open to Opportunities
             </h2>
@@ -38,15 +45,18 @@ const Opportunities = () => {
               I'm actively looking for opportunities to grow, learn, and make an impact. 
               If you have something exciting in mind, let's connect!
             </p>
-          </div>
+          </motion.div>
 
           {/* Opportunities Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {opportunities.map((item, index) => (
-              <div
+              <motion.div
                 key={item.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true, margin: "-50px" }}
                 className="group p-6 rounded-2xl gradient-card shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-2 text-center"
-                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-accent flex items-center justify-center group-hover:bg-primary transition-colors duration-300">
                   <item.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
@@ -57,7 +67,7 @@ const Opportunities = () => {
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {item.description}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
