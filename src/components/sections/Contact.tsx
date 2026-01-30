@@ -1,5 +1,6 @@
 import { Mail, Linkedin, Github, Instagram, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
 
 const socialLinks = [
   {
@@ -34,7 +35,13 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-3xl mx-auto text-center">
           {/* Section Header */}
-          <div className="mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="mb-12"
+          >
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
               Let's Connect
             </h2>
@@ -43,10 +50,16 @@ const Contact = () => {
               I'd love to hear from you! Whether it's an opportunity, collaboration, 
               or just a friendly hello — feel free to reach out.
             </p>
-          </div>
+          </motion.div>
 
           {/* Social Links */}
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true, margin: "-50px" }}
+            className="flex flex-wrap justify-center gap-4 mb-12"
+          >
             {socialLinks.map((link) => (
               <Button
                 key={link.name}
@@ -66,10 +79,16 @@ const Contact = () => {
                 </a>
               </Button>
             ))}
-          </div>
+          </motion.div>
 
           {/* CTA */}
-          <div className="p-8 rounded-2xl gradient-card shadow-card">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true, margin: "-50px" }}
+            className="p-8 rounded-2xl gradient-card shadow-card"
+          >
             <p className="text-xl font-display font-semibold text-foreground mb-2">
               Ready to create something amazing together?
             </p>
@@ -82,12 +101,18 @@ const Contact = () => {
                 Send me an Email
               </a>
             </Button>
-          </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Footer */}
-      <footer className="mt-24 pt-8 border-t border-border">
+      <motion.footer
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="mt-24 pt-8 border-t border-border"
+      >
         <div className="container mx-auto px-6 text-center">
           <p className="text-muted-foreground flex items-center justify-center gap-2">
             Made with <Heart className="w-4 h-4 text-red-400 fill-red-400" /> by Ritika Satish Oswal
@@ -96,7 +121,7 @@ const Contact = () => {
             © {new Date().getFullYear()} All rights reserved.
           </p>
         </div>
-      </footer>
+      </motion.footer>
     </section>
   );
 };

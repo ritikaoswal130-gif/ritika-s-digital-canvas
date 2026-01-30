@@ -1,4 +1,5 @@
 import { Code, Wrench, Heart } from "lucide-react";
+import { motion } from "framer-motion";
 
 const skillCategories = [
   {
@@ -43,20 +44,29 @@ const Skills = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, margin: "-100px" }}
+            className="text-center mb-16"
+          >
             <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
               Skills
             </h2>
             <div className="w-20 h-1 bg-primary mx-auto rounded-full" />
-          </div>
+          </motion.div>
 
           {/* Skills Grid */}
           <div className="grid md:grid-cols-3 gap-8">
             {skillCategories.map((category, index) => (
-              <div
+              <motion.div
                 key={category.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.15 }}
+                viewport={{ once: true, margin: "-50px" }}
                 className="p-8 rounded-2xl gradient-card shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1"
-                style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Category Header */}
                 <div className="flex items-center gap-4 mb-6">
@@ -79,7 +89,7 @@ const Skills = () => {
                     </span>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
