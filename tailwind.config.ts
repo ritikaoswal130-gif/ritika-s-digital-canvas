@@ -28,6 +28,8 @@ export default {
         "warm-white": "hsl(var(--warm-white))",
         golden: "hsl(var(--golden))",
         "golden-light": "hsl(var(--golden-light))",
+        navy: "hsl(var(--navy))",
+        "navy-light": "hsl(var(--navy-light))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
