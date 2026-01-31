@@ -6,25 +6,25 @@ const socialLinks = [
   {
     name: "Email",
     icon: Mail,
-    href: "mailto:ritika.oswal@example.com",
+    href: "mailto:ritikaoswal130@gmail.com",
     color: "hover:text-red-500",
   },
   {
     name: "LinkedIn",
     icon: Linkedin,
-    href: "https://linkedin.com/in/ritikaoswal",
+    href: "https://www.linkedin.com/in/ritika-oswal-40b060309",
     color: "hover:text-blue-600",
   },
   {
     name: "GitHub",
     icon: Github,
-    href: "https://github.com/ritikaoswal",
+    href: "https://github.com/ritikaoswal130-gif",
     color: "hover:text-gray-800",
   },
   {
     name: "Instagram",
     icon: Instagram,
-    href: "https://instagram.com/ritikaoswal",
+    href: "https://instagram.com/_ritika_oswal",
     color: "hover:text-pink-500",
   },
 ];
@@ -96,7 +96,7 @@ const Contact = () => {
               Let's turn ideas into reality!
             </p>
             <Button variant="hero" size="xl" asChild>
-              <a href="mailto:ritika.oswal@example.com">
+              <a href="mailto:ritikaoswal130@gmail.com">
                 <Mail className="mr-2 h-5 w-5" />
                 Send me an Email
               </a>
