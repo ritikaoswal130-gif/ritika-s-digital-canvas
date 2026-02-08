@@ -64,8 +64,8 @@ const About = () => {
               Representative at GeeksforGeeks</span>, I bridge the gap between learning and opportunity.
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed mt-4">
-              Beyond tech, I'm the <span className="text-foreground font-medium">Co-head of our College Magazine</span> and 
-              <span className="text-foreground font-medium"> Head of the Departmental Magazine</span>—spaces where my love 
+              Beyond tech, I'm the <span className="text-foreground font-medium">Co-head of our College Magazine</span> and
+              <span className="text-foreground font-medium"> Head of the Departmental Magazine</span> spaces where my love
               for reading and writing finds expression. I believe in consistency, friendliness, and the power 
               of continuous learning.
             </p>
