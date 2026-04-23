@@ -48,7 +48,7 @@ const Contact = () => {
             <div className="w-20 h-1 bg-primary mx-auto rounded-full mb-6" />
             <p className="text-lg text-muted-foreground">
               I'd love to hear from you! Whether it's an opportunity, collaboration, 
-              or just a friendly hello — feel free to reach out.
+              or just a friendly hello, feel free to reach out.
             </p>
           </motion.div>
 
