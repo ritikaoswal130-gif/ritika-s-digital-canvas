@@ -42,7 +42,7 @@ A modern, fully responsive portfolio website built with React and TypeScript, sh
 git clone https://github.com/ritikaoswal130-gif/ritika-s-digital-canvas.git
 
 # Navigate to project directory
-cd ritika-s-digital-canvas
+cd personal-portfolio
 
 # Install dependencies
 npm install
