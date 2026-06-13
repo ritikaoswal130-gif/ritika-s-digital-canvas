@@ -1,73 +1,133 @@
-# Welcome to your Lovable project
+# Ritika's Digital Canvas - Portfolio
 
-## Project info
+A modern, fully responsive portfolio website built with React and TypeScript, showcasing IT engineering projects, skills, education, and professional experiences.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## ✨ Features
 
-## How can I edit this code?
+- **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
+- **Dark/Light Theme Toggle** - User-friendly theme switcher with persistent preference
+- **Smooth Animations** - Framer Motion animations for engaging user experience
+- **Multiple Sections**:
+  - Hero Section - Eye-catching introduction
+  - About - Professional background
+  - Education - Academic qualifications
+  - Skills - Technical expertise
+  - Projects - Showcase of work
+  - Experience - Professional history
+  - Opportunities - Open to collaboration
+  - Contact - Social links and email
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
 
-**Use Lovable**
+- **Frontend Framework**: React 18+ with TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui (Radix UI primitives)
+- **Animations**: Framer Motion
+- **Testing**: Vitest
+- **Routing**: React Router
+- **State Management**: React Query
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🚀 Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
 
-**Use your preferred IDE**
+- Node.js 16+ and npm
+- Git
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Installation
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```bash
+# Clone the repository
+git clone https://github.com/ritikaoswal130-gif/ritika-s-digital-canvas.git
 
-Follow these steps:
+# Navigate to project directory
+cd ritika-s-digital-canvas
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Install dependencies
+npm install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The site will be available at `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📦 Available Scripts
 
-**Use GitHub Codespaces**
+```bash
+# Development
+npm run dev          # Start dev server with hot reload
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Production
+npm run build        # Build for production
+npm run preview      # Preview production build locally
 
-## What technologies are used for this project?
+# Testing & Linting
+npm run test         # Run tests with Vitest
+npm run lint         # Run ESLint
 
-This project is built with:
+# Type checking
+npm run type-check   # Check TypeScript types
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📂 Project Structure
 
-## How can I deploy this project?
+```
+src/
+├── components/
+│   ├── sections/      # Page sections (Hero, About, Contact, etc.)
+│   ├── ui/           # Reusable UI components
+│   ├── Navbar.tsx    # Navigation component
+│   ├── ThemeToggle.tsx # Theme switcher
+│   └── ThemeProvider.tsx
+├── pages/            # Page components
+├── hooks/            # Custom React hooks
+├── lib/              # Utility functions
+├── App.tsx           # Main app component
+├── main.tsx          # Entry point
+└── index.css         # Global styles
+```
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## 🎨 Customization
 
-## Can I connect a custom domain to my Lovable project?
+### Update Personal Information
+- Edit social links in `src/components/sections/Contact.tsx`
+- Update about section in `src/components/sections/About.tsx`
+- Modify skills, projects, and experience in respective section files
 
-Yes, you can!
+### Styling
+- Tailwind CSS configuration: `tailwind.config.ts`
+- Global styles: `src/index.css`
+- CSS variables for theme in `src/App.css`
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🌐 Deployment
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This project can be deployed to any static hosting platform:
+
+### Vercel (Recommended)
+```bash
+npm run build
+# Deploy the `dist` folder to Vercel
+```
+
+### Netlify
+Connect the GitHub repository to Netlify and it will auto-deploy on every push.
+
+### GitHub Pages
+```bash
+npm run build
+# Deploy `dist` folder to GitHub Pages
+```
+
+## 📝 License
+
+This project is open source and available under the MIT License.
+
+## 📧 Contact
+
+For inquiries or collaboration opportunities, reach out via:
+- Email: ritikaoswal130@gmail.com
+- LinkedIn: [Ritika Oswal](https://www.linkedin.com/in/ritika-oswal-40b060309)
+- GitHub: [ritikaoswal130-gif](https://github.com/ritikaoswal130-gif)
+- Instagram: [@_ritika_oswal](https://instagram.com/_ritika_oswal)
