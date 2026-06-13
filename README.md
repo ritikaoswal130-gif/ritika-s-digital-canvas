@@ -2,6 +2,8 @@
 
 A modern, fully responsive portfolio website built with React and TypeScript, showcasing IT engineering projects, skills, education, and professional experiences.
 
+**🌐 Live Demo:** https://ritika-s-digital-canvas-git-main-ritikaoswal130-gifs-projects.vercel.app/
+
 ## ✨ Features
 
 - **Responsive Design** - Works seamlessly on desktop, tablet, and mobile devices
