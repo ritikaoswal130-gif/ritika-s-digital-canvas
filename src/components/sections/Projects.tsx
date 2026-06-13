@@ -11,6 +11,27 @@ const projects = [
     github: "https://github.com/ritikaoswal",
     featured: true,
   },
+  {
+    title: "Portfolio Website",
+    description:
+      "A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. Features dark/light theme toggle, smooth animations with Framer Motion, and showcases projects, skills, and experiences.",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    github: "https://github.com/ritikaoswal130-gif/ritika-s-digital-canvas",
+  },
+  {
+    title: "Project Name Here",
+    description:
+      "Replace this with your project description. Highlight the key technologies used and the problem it solves.",
+    tags: ["Tag1", "Tag2", "Tag3"],
+    github: "https://github.com/yourusername/project-name",
+  },
+  {
+    title: "Another Project",
+    description:
+      "Add more projects by following the same structure. Each project should have a title, description, tags, and GitHub link.",
+    tags: ["Technology", "Skills", "Tools"],
+    github: "https://github.com/yourusername/another-project",
+  },
 ];
 
 const Projects = () => {
@@ -86,25 +107,6 @@ const Projects = () => {
                 </div>
               </motion.div>
             ))}
-
-            {/* Coming Soon Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true, margin: "-50px" }}
-              className="group p-8 rounded-2xl border-2 border-dashed border-border hover:border-primary/50 transition-all duration-300 flex flex-col items-center justify-center text-center min-h-[300px]"
-            >
-              <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mb-4 group-hover:bg-accent transition-colors duration-300">
-                <Sparkles className="w-8 h-8 text-muted-foreground group-hover:text-primary transition-colors duration-300" />
-              </div>
-              <h3 className="text-xl font-display font-bold text-foreground mb-2">
-                More Coming Soon
-              </h3>
-              <p className="text-muted-foreground">
-                Exciting projects in the works. Stay tuned!
-              </p>
-            </motion.div>
           </div>
         </div>
       </div>
