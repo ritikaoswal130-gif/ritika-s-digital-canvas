@@ -11,6 +11,15 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
+  build: {
+    outDir: "dist",
+    sourcemap: false,
+    rollupOptions: {
+      input: {
+        main: path.resolve(__dirname, "index.html"),
+      },
+    },
+  },
   plugins: [react()].filter(Boolean),
   resolve: {
     alias: {
