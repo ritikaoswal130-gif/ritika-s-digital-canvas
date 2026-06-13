@@ -18,20 +18,6 @@ const projects = [
     tags: ["React", "TypeScript", "Tailwind CSS", "Vite"],
     github: "https://github.com/ritikaoswal130-gif/ritika-s-digital-canvas",
   },
-  {
-    title: "Project Name Here",
-    description:
-      "Replace this with your project description. Highlight the key technologies used and the problem it solves.",
-    tags: ["Tag1", "Tag2", "Tag3"],
-    github: "https://github.com/yourusername/project-name",
-  },
-  {
-    title: "Another Project",
-    description:
-      "Add more projects by following the same structure. Each project should have a title, description, tags, and GitHub link.",
-    tags: ["Technology", "Skills", "Tools"],
-    github: "https://github.com/yourusername/another-project",
-  },
 ];
 
 const Projects = () => {
