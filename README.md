@@ -1,4 +1,4 @@
-# Ritika's Digital Canvas - Portfolio
+# Personal Portfolio
 
 A modern, fully responsive portfolio website built with React and TypeScript, showcasing IT engineering projects, skills, education, and professional experiences.
 
@@ -89,45 +89,6 @@ src/
 └── index.css         # Global styles
 ```
 
-## 🎨 Customization
-
-### Update Personal Information
-- Edit social links in `src/components/sections/Contact.tsx`
-- Update about section in `src/components/sections/About.tsx`
-- Modify skills, projects, and experience in respective section files
-
-### Styling
-- Tailwind CSS configuration: `tailwind.config.ts`
-- Global styles: `src/index.css`
-- CSS variables for theme in `src/App.css`
-
-## 🌐 Deployment
-
-This project can be deployed to any static hosting platform:
-
-### Vercel (Recommended)
-```bash
-npm run build
-# Deploy the `dist` folder to Vercel
-```
-
-### Netlify
-Connect the GitHub repository to Netlify and it will auto-deploy on every push.
-
-### GitHub Pages
-```bash
-npm run build
-# Deploy `dist` folder to GitHub Pages
-```
-
 ## 📝 License
 
 This project is open source and available under the MIT License.
-
-## 📧 Contact
-
-For inquiries or collaboration opportunities, reach out via:
-- Email: ritikaoswal130@gmail.com
-- LinkedIn: [Ritika Oswal](https://www.linkedin.com/in/ritika-oswal-40b060309)
-- GitHub: [ritikaoswal130-gif](https://github.com/ritikaoswal130-gif)
-- Instagram: [@_ritika_oswal](https://instagram.com/_ritika_oswal)
